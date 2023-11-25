@@ -19,6 +19,10 @@
 		55C5610B2B11EDDE0064AD04 /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5610A2B11EDDE0064AD04 /* RepositoriesView.swift */; };
 		55C5610D2B11EDED0064AD04 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5610C2B11EDED0064AD04 /* UsersView.swift */; };
 		55C561102B11EDFB0064AD04 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5610F2B11EDFB0064AD04 /* HomeView.swift */; };
+		55C561122B11F42F0064AD04 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561112B11F42F0064AD04 /* HomeCardView.swift */; };
+		55C561142B11F4500064AD04 /* HomeCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561132B11F4500064AD04 /* HomeCardType.swift */; };
+		55C561162B11F5190064AD04 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561152B11F5190064AD04 /* Color+.swift */; };
+		55C561182B11F6140064AD04 /* Code+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561172B11F6140064AD04 /* Code+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		55C5610A2B11EDDE0064AD04 /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
 		55C5610C2B11EDED0064AD04 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		55C5610F2B11EDFB0064AD04 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		55C561112B11F42F0064AD04 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
+		55C561132B11F4500064AD04 /* HomeCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardType.swift; sourceTree = "<group>"; };
+		55C561152B11F5190064AD04 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		55C561172B11F6140064AD04 /* Code+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Code+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +196,8 @@
 		55C561042B11ED6D0064AD04 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				55C561152B11F5190064AD04 /* Color+.swift */,
+				55C561172B11F6140064AD04 /* Code+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				55C5610F2B11EDFB0064AD04 /* HomeView.swift */,
+				55C561112B11F42F0064AD04 /* HomeCardView.swift */,
+				55C561132B11F4500064AD04 /* HomeCardType.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -355,10 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C5610B2B11EDDE0064AD04 /* RepositoriesView.swift in Sources */,
+				55C561162B11F5190064AD04 /* Color+.swift in Sources */,
 				55C560D12B11305C0064AD04 /* GitHubReposApp.swift in Sources */,
 				55C561002B11ECB10064AD04 /* TabItem.swift in Sources */,
+				55C561122B11F42F0064AD04 /* HomeCardView.swift in Sources */,
 				55C560FD2B11EC7F0064AD04 /* PreferenceStore.swift in Sources */,
+				55C561142B11F4500064AD04 /* HomeCardType.swift in Sources */,
 				55C561102B11EDFB0064AD04 /* HomeView.swift in Sources */,
+				55C561182B11F6140064AD04 /* Code+.swift in Sources */,
 				55C5610D2B11EDED0064AD04 /* UsersView.swift in Sources */,
 				55C561072B11ED950064AD04 /* MainTabsView.swift in Sources */,
 			);

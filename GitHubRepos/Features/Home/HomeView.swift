@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject private var preferenceStore: PreferenceStore
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(alignment: .leading) {
+                HStack(spacing: 15) {
+                    HomeCardView(type: .users) {
+                        preferenceStore.selectedTabItem = .users
+                    }
+                    
+                    HomeCardView(type: .repositories) {
+                        preferenceStore.selectedTabItem = .repositories
+                    }
+                }
+                Spacer()
+                .navigationTitle("Home")
+            }
+            .padding([.top, .horizontal])
+        }
     }
 }
 
