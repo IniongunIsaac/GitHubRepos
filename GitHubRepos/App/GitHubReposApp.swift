@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct GitHubReposApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabsView()
+                .environmentObject(PreferenceStore())
+                .accentColor(.black)
+                .preferredColorScheme(.light)
         }
     }
 }
