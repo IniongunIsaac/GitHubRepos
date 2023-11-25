@@ -35,7 +35,7 @@ struct HomeCardView: View {
                 isTapped = true
                 runAfter(0.1) {
                     isTapped = false
-                    runAfter(0.05) {
+                    runAfter(0.2) {
                         action?()
                     }
                 }

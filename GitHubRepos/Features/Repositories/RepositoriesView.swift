@@ -8,20 +8,31 @@
 import SwiftUI
 
 struct RepositoriesView: View {
-    @State private var visible: Bool = true
+    @State private var visible: Bool = false
     var body: some View {
         NavigationView {
             VStack {
                 SearchView(placeholder: "Search for repositories") { searchText in
                     
                 }
+                .padding(.horizontal)
+                .padding(.top, 4)
+                
                 Spacer()
+                
                 EmptyStateView(message: "Search Github for repositories, issues and pull requests!")
                     .visible(visible)
-                Spacer()
+                
+                ScrollView {
+                    ForEach(1...10, id: \.self) { _ in
+                        RepositoryView()
+                            .padding(.horizontal, 8)
+                            .padding(.bottom, 8)
+                    }
+                }
+                .padding(.top, 10)
+                .padding(.horizontal, 8)
             }
-            .padding(.horizontal)
-            .padding(.vertical, 4)
             .navigationTitle("Repositories")
         }
     }

@@ -26,6 +26,10 @@
 		55C5611B2B120D560064AD04 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5611A2B120D560064AD04 /* SearchView.swift */; };
 		55C5611D2B1215C60064AD04 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5611C2B1215C60064AD04 /* EmptyStateView.swift */; };
 		55C5611F2B121B390064AD04 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5611E2B121B390064AD04 /* View+.swift */; };
+		55C561212B1272FD0064AD04 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561202B1272FD0064AD04 /* RepositoryView.swift */; };
+		55C561232B12768B0064AD04 /* IconLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561222B12768B0064AD04 /* IconLabelView.swift */; };
+		55C561252B127DB40064AD04 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561242B127DB40064AD04 /* PillView.swift */; };
+		55C561272B127EA80064AD04 /* RepositoryTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561262B127EA80064AD04 /* RepositoryTagsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		55C5611A2B120D560064AD04 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		55C5611C2B1215C60064AD04 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		55C5611E2B121B390064AD04 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		55C561202B1272FD0064AD04 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
+		55C561222B12768B0064AD04 /* IconLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabelView.swift; sourceTree = "<group>"; };
+		55C561242B127DB40064AD04 /* PillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillView.swift; sourceTree = "<group>"; };
+		55C561262B127EA80064AD04 /* RepositoryTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTagsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +201,7 @@
 			children = (
 				55C5610E2B11EDF10064AD04 /* Home */,
 				55C561092B11EDC60064AD04 /* Users */,
-				55C561082B11EDBF0064AD04 /* Repos */,
+				55C561082B11EDBF0064AD04 /* Repositories */,
 				55C561052B11ED750064AD04 /* MainTabs */,
 			);
 			path = Features;
@@ -218,12 +226,14 @@
 			path = MainTabs;
 			sourceTree = "<group>";
 		};
-		55C561082B11EDBF0064AD04 /* Repos */ = {
+		55C561082B11EDBF0064AD04 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				55C5610A2B11EDDE0064AD04 /* RepositoriesView.swift */,
+				55C561202B1272FD0064AD04 /* RepositoryView.swift */,
+				55C561262B127EA80064AD04 /* RepositoryTagsView.swift */,
 			);
-			path = Repos;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		55C561092B11EDC60064AD04 /* Users */ = {
@@ -249,6 +259,8 @@
 			children = (
 				55C5611A2B120D560064AD04 /* SearchView.swift */,
 				55C5611C2B1215C60064AD04 /* EmptyStateView.swift */,
+				55C561222B12768B0064AD04 /* IconLabelView.swift */,
+				55C561242B127DB40064AD04 /* PillView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -388,11 +400,15 @@
 				55C560D12B11305C0064AD04 /* GitHubReposApp.swift in Sources */,
 				55C561002B11ECB10064AD04 /* TabItem.swift in Sources */,
 				55C5611F2B121B390064AD04 /* View+.swift in Sources */,
+				55C561252B127DB40064AD04 /* PillView.swift in Sources */,
+				55C561232B12768B0064AD04 /* IconLabelView.swift in Sources */,
 				55C5611B2B120D560064AD04 /* SearchView.swift in Sources */,
 				55C5611D2B1215C60064AD04 /* EmptyStateView.swift in Sources */,
 				55C561122B11F42F0064AD04 /* HomeCardView.swift in Sources */,
 				55C560FD2B11EC7F0064AD04 /* PreferenceStore.swift in Sources */,
+				55C561272B127EA80064AD04 /* RepositoryTagsView.swift in Sources */,
 				55C561142B11F4500064AD04 /* HomeCardType.swift in Sources */,
+				55C561212B1272FD0064AD04 /* RepositoryView.swift in Sources */,
 				55C561102B11EDFB0064AD04 /* HomeView.swift in Sources */,
 				55C561182B11F6140064AD04 /* Code+.swift in Sources */,
 				55C5610D2B11EDED0064AD04 /* UsersView.swift in Sources */,
