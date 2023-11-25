@@ -9,7 +9,19 @@ import SwiftUI
 
 struct UsersView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                SearchView(placeholder: "Search for users...") { searchText in
+                    
+                }
+                Spacer()
+                EmptyStateView(message: "Search Github for users...")
+                Spacer()
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 4)
+            .navigationTitle("Users")
+        }
     }
 }
 

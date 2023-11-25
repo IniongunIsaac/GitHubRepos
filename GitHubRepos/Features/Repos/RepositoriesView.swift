@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct RepositoriesView: View {
+    @State private var visible: Bool = true
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                SearchView(placeholder: "Search for repositories") { searchText in
+                    
+                }
+                Spacer()
+                EmptyStateView(message: "Search Github for repositories, issues and pull requests!")
+                    .visible(visible)
+                Spacer()
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 4)
+            .navigationTitle("Repositories")
+        }
     }
 }
 

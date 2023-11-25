@@ -24,8 +24,10 @@ struct HomeCardView: View {
         .frame(maxWidth: .infinity)
         .padding()
         .background(type.backgroundColor)
-        .border(Color.gray.opacity(0.2), width: 0.7)
-        .cornerRadius(3)
+        .overlay(
+            RoundedRectangle(cornerRadius: 5)
+                .stroke(Color.gray.opacity(0.5), lineWidth: 0.5)
+        )
         .scaleEffect(isTapped ? 1.1 : 1)
         .animation(.easeInOut)
         .onTapGesture {
@@ -33,7 +35,9 @@ struct HomeCardView: View {
                 isTapped = true
                 runAfter(0.1) {
                     isTapped = false
-                    action?()
+                    runAfter(0.05) {
+                        action?()
+                    }
                 }
             }
         }
