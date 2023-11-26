@@ -10,16 +10,18 @@ import SwiftUI
 struct IconLabelView: View {
     var imageResource: ImageResource
     var text: String
+    var font: Font = .body
+    var spacing: CGFloat = 4
     
     var body: some View {
-        HStack(spacing: 4) {
+        HStack(spacing: spacing) {
             Image(imageResource)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 16, height: 16)
             
             Text(text)
-                .font(.body)
+                .font(font)
         }
     }
 }
