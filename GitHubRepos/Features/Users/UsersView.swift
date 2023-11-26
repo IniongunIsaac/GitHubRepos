@@ -25,14 +25,11 @@ struct UsersView: View {
                 
                 ScrollView {
                     ForEach(1...20, id: \.self) { _ in
-                        UserView()
-                            .padding(.horizontal, 8)
-                            .padding(.bottom, 8)
-                            .onTapGesture {
-                                withAnimation {
-                                    showDetails.toggle()
-                                }
-                            }
+                        UserView() {
+                            showDetails.toggle()
+                        }
+                        .padding(.horizontal, 8)
+                        .padding(.bottom, 8)
                     }
                 }
                 .padding(.top, 10)

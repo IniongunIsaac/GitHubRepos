@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct UserView: View {
+    var action: VoidAction? = nil
+    @State private var isTapped = false
+    
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
             Image(.profilePlaceholder)
@@ -37,6 +40,19 @@ struct UserView: View {
             RoundedRectangle(cornerRadius: 4)
                 .stroke(Color.black.opacity(0.15), lineWidth: 0.5)
         )
+        .scaleEffect(isTapped ? 1.1 : 1)
+        .animation(.easeInOut)
+        .onTapGesture {
+            withAnimation {
+                isTapped = true
+                runAfter(0.1) {
+                    isTapped = false
+                    runAfter(0.2) {
+                        action?()
+                    }
+                }
+            }
+        }
     }
 }
 
