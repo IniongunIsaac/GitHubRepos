@@ -31,14 +31,14 @@ struct UserRepositoryView: View {
                 
                 IconLabelView(imageResource: .star, text: "\(repo.stargazersCount ?? 0)")
                 
-                IconLabelView(imageResource: .greenCircle, text: "\(repo.language ?? "")")
+                IconLabelView(imageResource: .greenCircle, text: "\(repo.language ?? "-lang-")")
                 
             }
             
-            Text(repo.description ?? "")
+            Text(repo.repoDescription ?? "")
                 .font(.system(size: 15, weight: .regular))
                 .lineLimit(3)
-                .visible(repo.description?.isNotEmpty ?? false)
+                .visible(repo.repoDescription?.isNotEmpty ?? false)
             
             HStack {
                 Link(destination: URL(string: repo.htmlURL ?? "")!) {

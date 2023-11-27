@@ -45,11 +45,11 @@ struct RepositoryView: View {
                 
             }
             
-            Text(repository.description ?? "--description here--")
+            Text(repository.repoDescription ?? "--description here--")
                 .font(.system(size: 15, weight: .regular))
                 .lineLimit(2)
             
-            RepositoryTagsView(tags: repository.topics ?? [])
+            RepositoryTagsView(tags: Array(repository.topics))
                 .visible(repository.hasTopics)
         }
         .padding()

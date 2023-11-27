@@ -21,7 +21,6 @@
 		5544356B2B1424F8004DB3B2 /* UsersRemoteDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544356A2B1424F8004DB3B2 /* UsersRemoteDatasourceProtocol.swift */; };
 		5544356D2B14250F004DB3B2 /* UsersRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544356C2B14250F004DB3B2 /* UsersRemoteDatasource.swift */; };
 		554435712B14296C004DB3B2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435702B14296C004DB3B2 /* Repository.swift */; };
-		554435732B142980004DB3B2 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435722B142980004DB3B2 /* License.swift */; };
 		554435782B142B2F004DB3B2 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435772B142B2F004DB3B2 /* RepositoriesViewModel.swift */; };
 		554435812B149312004DB3B2 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435802B149312004DB3B2 /* LoaderView.swift */; };
 		554435842B14A798004DB3B2 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 554435832B14A798004DB3B2 /* AlertToast */; };
@@ -53,6 +52,8 @@
 		55C561232B12768B0064AD04 /* IconLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561222B12768B0064AD04 /* IconLabelView.swift */; };
 		55C561252B127DB40064AD04 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561242B127DB40064AD04 /* PillView.swift */; };
 		55C561272B127EA80064AD04 /* RepositoryTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C561262B127EA80064AD04 /* RepositoryTagsView.swift */; };
+		55F051A02B14F4170089EA6E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 55F0519F2B14F4170089EA6E /* Realm */; };
+		55F051A22B14F4170089EA6E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 55F051A12B14F4170089EA6E /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +88,6 @@
 		5544356A2B1424F8004DB3B2 /* UsersRemoteDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRemoteDatasourceProtocol.swift; sourceTree = "<group>"; };
 		5544356C2B14250F004DB3B2 /* UsersRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRemoteDatasource.swift; sourceTree = "<group>"; };
 		554435702B14296C004DB3B2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		554435722B142980004DB3B2 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		554435772B142B2F004DB3B2 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		554435802B149312004DB3B2 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		554435852B14ACDD004DB3B2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -128,6 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F051A22B14F4170089EA6E /* RealmSwift in Frameworks */,
+				55F051A02B14F4170089EA6E /* Realm in Frameworks */,
 				5544358E2B14D031004DB3B2 /* Kingfisher in Frameworks */,
 				554435842B14A798004DB3B2 /* AlertToast in Frameworks */,
 			);
@@ -304,7 +306,6 @@
 			children = (
 				55C560FF2B11ECB10064AD04 /* TabItem.swift */,
 				554435702B14296C004DB3B2 /* Repository.swift */,
-				554435722B142980004DB3B2 /* License.swift */,
 				554435852B14ACDD004DB3B2 /* User.swift */,
 				554435872B14ADAD004DB3B2 /* ItemsResponse.swift */,
 			);
@@ -423,6 +424,8 @@
 			packageProductDependencies = (
 				554435832B14A798004DB3B2 /* AlertToast */,
 				5544358D2B14D031004DB3B2 /* Kingfisher */,
+				55F0519F2B14F4170089EA6E /* Realm */,
+				55F051A12B14F4170089EA6E /* RealmSwift */,
 			);
 			productName = GitHubRepos;
 			productReference = 55C560CD2B11305C0064AD04 /* GitHubRepos.app */;
@@ -499,6 +502,7 @@
 			packageReferences = (
 				554435822B14A798004DB3B2 /* XCRemoteSwiftPackageReference "AlertToast" */,
 				5544358C2B14D031004DB3B2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				55F0519E2B14F4170089EA6E /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 55C560CE2B11305C0064AD04 /* Products */;
 			projectDirPath = "";
@@ -550,7 +554,6 @@
 				5544355E2B141A5B004DB3B2 /* Endpoint.swift in Sources */,
 				55C561002B11ECB10064AD04 /* TabItem.swift in Sources */,
 				554435782B142B2F004DB3B2 /* RepositoriesViewModel.swift in Sources */,
-				554435732B142980004DB3B2 /* License.swift in Sources */,
 				55C5611F2B121B390064AD04 /* View+.swift in Sources */,
 				55C561252B127DB40064AD04 /* PillView.swift in Sources */,
 				5544355C2B1417B9004DB3B2 /* HTTPMethod.swift in Sources */,
@@ -930,6 +933,14 @@
 				minimumVersion = 7.10.0;
 			};
 		};
+		55F0519E2B14F4170089EA6E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.44.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -942,6 +953,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5544358C2B14D031004DB3B2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		55F0519F2B14F4170089EA6E /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F0519E2B14F4170089EA6E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		55F051A12B14F4170089EA6E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F0519E2B14F4170089EA6E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
