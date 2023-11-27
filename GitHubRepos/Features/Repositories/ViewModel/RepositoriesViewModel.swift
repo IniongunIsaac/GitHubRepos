@@ -11,6 +11,7 @@ import Foundation
 final class RepositoriesViewModel: ObservableObject {
     private let remoteDatasource: RepositoriesRemoteDatasourceProtocol
     private let localDatasource: RepositoriesLocalDatasourceProtocol
+    
     @Published var repositories = [Repository]()
     private var allRepositories = [Repository]()
     @Published var showLoader = false
@@ -30,8 +31,7 @@ final class RepositoriesViewModel: ObservableObject {
         do {
             let reposResponse = try await remoteDatasource.getRepositories(query: query)
             showLoader.toggle()
-            let repos = reposResponse.items ?? []
-            didGetRepositories(repos)
+            didGetRepositories(reposResponse.items ?? [])
         } catch {
             kprint(error.localizedDescription, logType: .error)
             showLoader.toggle()
@@ -41,7 +41,7 @@ final class RepositoriesViewModel: ObservableObject {
     }
     
     private func didGetRepositories(_ repos: [Repository]) {
-        repositories.append(contentsOf: repos)
+        repositories.appendIfNotExists(contentsOf: repos)
         localDatasource.saveRepositories(repos)
         allRepositories = localDatasource.getRepositories()
     }

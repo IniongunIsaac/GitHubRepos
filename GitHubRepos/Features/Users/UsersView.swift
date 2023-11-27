@@ -17,11 +17,16 @@ struct UsersView: View {
                 LoaderView()
                     .visible(viewModel.showLoader)
                 
-                SearchView(placeholder: "Search for users...") { searchText in
-                    Task {
-                        await viewModel.getUsers(query: searchText)
+                SearchView(
+                    placeholder: "Search for users...",
+                    searchAction: { searchText in
+                        Task {
+                            await viewModel.searchUsers(query: searchText)
+                        }
+                    }, filterAction:  { searchText in
+                        viewModel.filterUsers(text: searchText)
                     }
-                }
+                )
                 .padding(.horizontal)
                 .padding(.top, 0)
                 
@@ -54,6 +59,9 @@ struct UsersView: View {
                 .hidden()
             }
             .navigationTitle("Users")
+            .onAppear {
+                viewModel.getUsers()
+            }
         }
     }
 }

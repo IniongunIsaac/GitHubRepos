@@ -10,4 +10,5 @@ import Foundation
 protocol UsersLocalDatasourceProtocol {
     func getUsers() -> [User]
     func saveUsers(_ users: [User])
+    func getUser(id: Int) -> User?
 }

@@ -42,22 +42,12 @@ func runOnBackground(
     }
 }
 
-extension String {
-    func insensitiveEquals(_ value: String) -> Bool {
-        localizedCaseInsensitiveCompare(value) == .orderedSame
-    }
-    
-    func insensitiveNotEquals(_ value: String) -> Bool {
-        localizedCaseInsensitiveCompare(value) != .orderedSame
-    }
-    
-    func insensitiveContains(_ value: String) -> Bool {
-        lowercased().localizedCaseInsensitiveContains(value.lowercased())
-    }
-}
-
-extension Optional where Wrapped == String {
-    var orEmpty: String {
-        self ?? ""
+extension Array where Element: Equatable {
+    mutating func appendIfNotExists<S: Sequence>(contentsOf newElements: S) where S.Element == Element {
+        for element in newElements {
+            if !contains(element) {
+                append(element)
+            }
+        }
     }
 }

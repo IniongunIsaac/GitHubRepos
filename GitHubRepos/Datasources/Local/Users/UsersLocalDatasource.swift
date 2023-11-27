@@ -24,4 +24,8 @@ struct UsersLocalDatasource: UsersLocalDatasourceProtocol {
             kprint("unable to save users => \(error)", logType: .error)
         }
     }
+    
+    func getUser(id: Int) -> User? {
+        realm.object(ofType: User.self, forPrimaryKey: id)
+    }
 }

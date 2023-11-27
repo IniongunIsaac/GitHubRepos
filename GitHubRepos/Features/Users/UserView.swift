@@ -36,7 +36,7 @@ struct UserView: View {
                     Text(user.nodeID ?? "--node--id--")
                         .font(.system(size: 14, weight: .regular))
                     
-                    Text("\(user.id ?? 0)")
+                    Text("\(user.id)")
                         .font(.system(size: 14, weight: .regular))
                         .lineLimit(2)
                 }
