@@ -8,15 +8,25 @@
 import Foundation
 
 enum Endpoint {
-    case repos
+    case repositories
     case users
+    case userRepositories(String)
+    case userDetails(String)
+    
+    private var kpath: String {
+        switch self {
+        case .repositories:
+            return "search/repositories"
+        case .users:
+            return "users"
+        case let .userRepositories(username):
+            return "users/\(username)/repos"
+        case let .userDetails(username):
+            return "users/\(username)"
+        }
+    }
     
     var path: String {
-        switch self {
-        case .repos:
-            return ""
-        case .users:
-            return ""
-        }
+        "https://api.github.com/\(kpath)"
     }
 }

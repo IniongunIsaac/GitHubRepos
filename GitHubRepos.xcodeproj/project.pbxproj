@@ -16,10 +16,16 @@
 		5544355E2B141A5B004DB3B2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544355D2B141A5B004DB3B2 /* Endpoint.swift */; };
 		554435602B141D2E004DB3B2 /* Logger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544355F2B141D2E004DB3B2 /* Logger+.swift */; };
 		554435632B141DEE004DB3B2 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435622B141DEE004DB3B2 /* NetworkServiceProtocol.swift */; };
-		554435662B1423E8004DB3B2 /* RepositoryRemoteDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435652B1423E8004DB3B2 /* RepositoryRemoteDatasourceProtocol.swift */; };
-		554435682B14241F004DB3B2 /* RepositoryRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435672B14241F004DB3B2 /* RepositoryRemoteDatasource.swift */; };
+		554435662B1423E8004DB3B2 /* RepositoriesRemoteDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435652B1423E8004DB3B2 /* RepositoriesRemoteDatasourceProtocol.swift */; };
+		554435682B14241F004DB3B2 /* RepositoriesRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435672B14241F004DB3B2 /* RepositoriesRemoteDatasource.swift */; };
 		5544356B2B1424F8004DB3B2 /* UsersRemoteDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544356A2B1424F8004DB3B2 /* UsersRemoteDatasourceProtocol.swift */; };
 		5544356D2B14250F004DB3B2 /* UsersRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544356C2B14250F004DB3B2 /* UsersRemoteDatasource.swift */; };
+		5544356F2B142911004DB3B2 /* RepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544356E2B142911004DB3B2 /* RepositoriesResponse.swift */; };
+		554435712B14296C004DB3B2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435702B14296C004DB3B2 /* Repository.swift */; };
+		554435732B142980004DB3B2 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435722B142980004DB3B2 /* License.swift */; };
+		554435752B142998004DB3B2 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435742B142998004DB3B2 /* Owner.swift */; };
+		554435782B142B2F004DB3B2 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435772B142B2F004DB3B2 /* RepositoriesViewModel.swift */; };
+		554435812B149312004DB3B2 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435802B149312004DB3B2 /* LoaderView.swift */; };
 		555B60B02B12AB6700314F1E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555B60AF2B12AB6700314F1E /* UserView.swift */; };
 		55C560D12B11305C0064AD04 /* GitHubReposApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C560D02B11305C0064AD04 /* GitHubReposApp.swift */; };
 		55C560D52B11305D0064AD04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C560D42B11305D0064AD04 /* Assets.xcassets */; };
@@ -73,10 +79,16 @@
 		5544355D2B141A5B004DB3B2 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		5544355F2B141D2E004DB3B2 /* Logger+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+.swift"; sourceTree = "<group>"; };
 		554435622B141DEE004DB3B2 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
-		554435652B1423E8004DB3B2 /* RepositoryRemoteDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRemoteDatasourceProtocol.swift; sourceTree = "<group>"; };
-		554435672B14241F004DB3B2 /* RepositoryRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRemoteDatasource.swift; sourceTree = "<group>"; };
+		554435652B1423E8004DB3B2 /* RepositoriesRemoteDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRemoteDatasourceProtocol.swift; sourceTree = "<group>"; };
+		554435672B14241F004DB3B2 /* RepositoriesRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRemoteDatasource.swift; sourceTree = "<group>"; };
 		5544356A2B1424F8004DB3B2 /* UsersRemoteDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRemoteDatasourceProtocol.swift; sourceTree = "<group>"; };
 		5544356C2B14250F004DB3B2 /* UsersRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRemoteDatasource.swift; sourceTree = "<group>"; };
+		5544356E2B142911004DB3B2 /* RepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesResponse.swift; sourceTree = "<group>"; };
+		554435702B14296C004DB3B2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		554435722B142980004DB3B2 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		554435742B142998004DB3B2 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		554435772B142B2F004DB3B2 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		554435802B149312004DB3B2 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		555B60AF2B12AB6700314F1E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		55C560CD2B11305C0064AD04 /* GitHubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C560D02B11305C0064AD04 /* GitHubReposApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposApp.swift; sourceTree = "<group>"; };
@@ -145,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				554435692B1424D7004DB3B2 /* Users */,
-				554435642B1423C3004DB3B2 /* Repository */,
+				554435642B1423C3004DB3B2 /* Repositories */,
 				554435612B141DE0004DB3B2 /* Service */,
 				554435542B14164B004DB3B2 /* Utils */,
 			);
@@ -179,13 +191,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		554435642B1423C3004DB3B2 /* Repository */ = {
+		554435642B1423C3004DB3B2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				554435652B1423E8004DB3B2 /* RepositoryRemoteDatasourceProtocol.swift */,
-				554435672B14241F004DB3B2 /* RepositoryRemoteDatasource.swift */,
+				554435652B1423E8004DB3B2 /* RepositoriesRemoteDatasourceProtocol.swift */,
+				554435672B14241F004DB3B2 /* RepositoriesRemoteDatasource.swift */,
 			);
-			path = Repository;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		554435692B1424D7004DB3B2 /* Users */ = {
@@ -195,6 +207,14 @@
 				5544356C2B14250F004DB3B2 /* UsersRemoteDatasource.swift */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		554435762B142B18004DB3B2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				554435772B142B2F004DB3B2 /* RepositoriesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		55C560C42B11305C0064AD04 = {
@@ -269,6 +289,10 @@
 			isa = PBXGroup;
 			children = (
 				55C560FF2B11ECB10064AD04 /* TabItem.swift */,
+				5544356E2B142911004DB3B2 /* RepositoriesResponse.swift */,
+				554435702B14296C004DB3B2 /* Repository.swift */,
+				554435722B142980004DB3B2 /* License.swift */,
+				554435742B142998004DB3B2 /* Owner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +348,7 @@
 		55C561082B11EDBF0064AD04 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				554435762B142B18004DB3B2 /* ViewModel */,
 				55C5610A2B11EDDE0064AD04 /* RepositoriesView.swift */,
 				55C561202B1272FD0064AD04 /* RepositoryView.swift */,
 				55C561262B127EA80064AD04 /* RepositoryTagsView.swift */,
@@ -359,6 +384,7 @@
 				55C5611C2B1215C60064AD04 /* EmptyStateView.swift */,
 				55C561222B12768B0064AD04 /* IconLabelView.swift */,
 				55C561242B127DB40064AD04 /* PillView.swift */,
+				554435802B149312004DB3B2 /* LoaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -500,15 +526,20 @@
 				555B60B02B12AB6700314F1E /* UserView.swift in Sources */,
 				5544355E2B141A5B004DB3B2 /* Endpoint.swift in Sources */,
 				55C561002B11ECB10064AD04 /* TabItem.swift in Sources */,
+				554435782B142B2F004DB3B2 /* RepositoriesViewModel.swift in Sources */,
+				554435732B142980004DB3B2 /* License.swift in Sources */,
 				55C5611F2B121B390064AD04 /* View+.swift in Sources */,
 				55C561252B127DB40064AD04 /* PillView.swift in Sources */,
 				5544355C2B1417B9004DB3B2 /* HTTPMethod.swift in Sources */,
-				554435682B14241F004DB3B2 /* RepositoryRemoteDatasource.swift in Sources */,
+				554435682B14241F004DB3B2 /* RepositoriesRemoteDatasource.swift in Sources */,
 				55C561232B12768B0064AD04 /* IconLabelView.swift in Sources */,
+				554435752B142998004DB3B2 /* Owner.swift in Sources */,
 				55C5611B2B120D560064AD04 /* SearchView.swift in Sources */,
+				554435812B149312004DB3B2 /* LoaderView.swift in Sources */,
+				5544356F2B142911004DB3B2 /* RepositoriesResponse.swift in Sources */,
 				5544355A2B141737004DB3B2 /* NetworkService.swift in Sources */,
 				55C5611D2B1215C60064AD04 /* EmptyStateView.swift in Sources */,
-				554435662B1423E8004DB3B2 /* RepositoryRemoteDatasourceProtocol.swift in Sources */,
+				554435662B1423E8004DB3B2 /* RepositoriesRemoteDatasourceProtocol.swift in Sources */,
 				55C561122B11F42F0064AD04 /* HomeCardView.swift in Sources */,
 				55C560FD2B11EC7F0064AD04 /* PreferenceStore.swift in Sources */,
 				554435502B13F38B004DB3B2 /* UserRepositoryView.swift in Sources */,
@@ -521,6 +552,7 @@
 				55C561182B11F6140064AD04 /* Code+.swift in Sources */,
 				554435582B1416CA004DB3B2 /* Codable+.swift in Sources */,
 				554435632B141DEE004DB3B2 /* NetworkServiceProtocol.swift in Sources */,
+				554435712B14296C004DB3B2 /* Repository.swift in Sources */,
 				55C5610D2B11EDED0064AD04 /* UsersView.swift in Sources */,
 				55C561072B11ED950064AD04 /* MainTabsView.swift in Sources */,
 				554435562B141685004DB3B2 /* NetworkError.swift in Sources */,

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C64C6AA1-3F30-4F9D-AAB4-4AFC7D827B73"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC498AE6-FD99-4E15-9057-5A65B3FB5B13"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "makeRequest(endpoint:method:parameters:headers:responseType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC498AE6-FD99-4E15-9057-5A65B3FB5B13 - 42e99086458d33c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for GitHubRepos.NetworkService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(endpoint: GitHubRepos.Endpoint, method: GitHubRepos.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, responseType: &#x3c4;_0_0.Type) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GitHubRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iniongunisaac/XcodeProjects/GitHubRepos/GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "CC498AE6-FD99-4E15-9057-5A65B3FB5B13 - 42e99086458d3302"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for GitHubRepos.NetworkService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(endpoint: GitHubRepos.Endpoint, method: GitHubRepos.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, responseType: &#x3c4;_0_0.Type) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GitHubRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iniongunisaac/XcodeProjects/GitHubRepos/GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1784">
+               </Location>
+               <Location
+                  uuid = "CC498AE6-FD99-4E15-9057-5A65B3FB5B13 - 42e99086458d3302"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for GitHubRepos.NetworkService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(endpoint: GitHubRepos.Endpoint, method: GitHubRepos.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, responseType: &#x3c4;_0_0.Type) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GitHubRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iniongunisaac/XcodeProjects/GitHubRepos/GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1752">
+               </Location>
+               <Location
+                  uuid = "CC498AE6-FD99-4E15-9057-5A65B3FB5B13 - 42e99086458d3302"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for GitHubRepos.NetworkService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(endpoint: GitHubRepos.Endpoint, method: GitHubRepos.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, responseType: &#x3c4;_0_0.Type) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GitHubRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iniongunisaac/XcodeProjects/GitHubRepos/GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1980">
+               </Location>
+               <Location
+                  uuid = "CC498AE6-FD99-4E15-9057-5A65B3FB5B13 - 42e99086458d3302"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for GitHubRepos.NetworkService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(endpoint: GitHubRepos.Endpoint, method: GitHubRepos.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, responseType: &#x3c4;_0_0.Type) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GitHubRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iniongunisaac/XcodeProjects/GitHubRepos/GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1992">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB13BFB1-4EF4-46D1-BEF7-5B76B1E6B81D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "makeRequest(endpoint:method:parameters:headers:responseType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AB13BFB1-4EF4-46D1-BEF7-5B76B1E6B81D - 42e99086458d3e8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for GitHubRepos.NetworkService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(endpoint: GitHubRepos.Endpoint, method: GitHubRepos.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, responseType: &#x3c4;_0_0.Type) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GitHubRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iniongunisaac/XcodeProjects/GitHubRepos/GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "2400">
+               </Location>
+               <Location
+                  uuid = "AB13BFB1-4EF4-46D1-BEF7-5B76B1E6B81D - 42e99086458d3e2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for GitHubRepos.NetworkService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(endpoint: GitHubRepos.Endpoint, method: GitHubRepos.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, responseType: &#x3c4;_0_0.Type) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GitHubRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iniongunisaac/XcodeProjects/GitHubRepos/GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "2604">
+               </Location>
+               <Location
+                  uuid = "AB13BFB1-4EF4-46D1-BEF7-5B76B1E6B81D - 42e99086458d3e2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for GitHubRepos.NetworkService.makeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(endpoint: GitHubRepos.Endpoint, method: GitHubRepos.HTTPMethod, parameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, headers: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, responseType: &#x3c4;_0_0.Type) async throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GitHubRepos"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iniongunisaac/XcodeProjects/GitHubRepos/GitHubRepos/Datasources/Remote/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "2620">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -13,4 +13,5 @@ enum NetworkError: Error {
     case noInternetConnection
     case decodingFailed
     case badRequest
+    case invalidDataPrettyJson
 }

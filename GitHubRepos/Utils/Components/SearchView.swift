@@ -20,6 +20,8 @@ struct SearchView: View {
             
             TextField(placeholder, text: $searchText)
                 .font(.system(size: 12))
+                .autocapitalization(.none)
+                .autocorrectionDisabled()
             
             Button("Search") {
                 searchAction?(searchText)

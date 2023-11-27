@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RepositoryView: View {
+    let repository: Repository
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             
@@ -17,23 +19,30 @@ struct RepositoryView: View {
                     .scaledToFit()
                     .frame(width: 20, height: 20)
                 
-                Text("IsaacIniongun/GitHubRepos")
+                Text(repository.fullName ?? "full/name")
                     .lineLimit(1)
                     .font(.system(size: 15, weight: .regular))
                 
                 Spacer()
                 
-                IconLabelView(imageResource: .star, text: "10")
+                IconLabelView(
+                    imageResource: .star,
+                    text: "\(repository.stargazersCount ?? 0)"
+                )
                 
-                IconLabelView(imageResource: .greenCircle, text: "Vue")
+                IconLabelView(
+                    imageResource: .greenCircle,
+                    text: "\(repository.language ?? "Lang")"
+                )
                 
             }
             
-            Text("These are random words that will be replaced in due time. Config files for my github profile hese are random words that will be replaced in due time. Config files for my github profile")
+            Text(repository.description ?? "--description here--")
                 .font(.system(size: 15, weight: .regular))
                 .lineLimit(2)
             
-            RepositoryTagsView(tags: tags)
+            RepositoryTagsView(tags: repository.topics ?? [])
+                .visible(repository.hasTopics)
         }
         .padding()
         .overlay(
@@ -43,7 +52,7 @@ struct RepositoryView: View {
     }
 }
 
-#Preview {
-    RepositoryView()
-        .padding()
-}
+//#Preview {
+//    RepositoryView()
+//        .padding()
+//}

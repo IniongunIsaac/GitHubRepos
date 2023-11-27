@@ -9,8 +9,10 @@ import SwiftUI
 
 struct IconLabelView: View {
     var imageResource: ImageResource
+    var imageWidth: CGFloat = 12
+    var imageHeight: CGFloat = 12
     var text: String
-    var font: Font = .body
+    var font: Font = .system(size: 12, weight: .regular)
     var spacing: CGFloat = 4
     
     var body: some View {
@@ -18,7 +20,7 @@ struct IconLabelView: View {
             Image(imageResource)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 16, height: 16)
+                .frame(width: imageWidth, height: imageHeight)
             
             Text(text)
                 .font(font)

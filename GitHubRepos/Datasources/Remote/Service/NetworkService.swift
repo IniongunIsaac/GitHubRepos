@@ -41,9 +41,7 @@ final class NetworkService: NetworkServiceProtocol {
             throw NetworkError.noInternetConnection
         }
         
-        guard var urlComponents = URLComponents(string: endpoint.path),
-              let requestURL = urlComponents.url
-        else {
+        guard var urlComponents = URLComponents(string: endpoint.path) else {
             throw NetworkError.invalidURL
         }
         
@@ -53,7 +51,11 @@ final class NetworkService: NetworkServiceProtocol {
             }
         }
         
-        kprint("Request URL: \(requestURL.absoluteString)")
+        guard let requestURL = urlComponents.url else {
+            throw NetworkError.invalidURL
+        }
+        
+        kprint("Request URL: \(requestURL.absoluteURL)")
         
         var urlRequest = URLRequest(url: requestURL)
         urlRequest.httpMethod = method.rawValue
@@ -75,15 +77,33 @@ final class NetworkService: NetworkServiceProtocol {
         }
 
         do {
-            guard let response = try? data.decode(into: T.self) else {
+            let kdata = data
+            
+            do {
+                kprint("Data => PrettyJson")
+                kprint(try kdata.prettyJson())
+            } catch {
+                kprint("Data => PrettyJson Failure")
+                kprint("\(error)")
+            }
+            
+            do {
+                let response = try kdata.decode(into: T.self)
+                
+                kprint("Request Response:")
+                kprint(response.prettyJson)
+                
+                return response
+            } catch {
+                kprint("Decoding Error:")
+                kprint("\(error)", logType: .error)
+                
                 throw NetworkError.decodingFailed
             }
             
-            kprint("Request Response:")
-            kprint(response.prettyJson)
-            
-            return response
         } catch {
+            kprint("Request Failure:")
+            kprint(error.localizedDescription, logType: .error)
             throw NetworkError.requestFailed
         }
     }
