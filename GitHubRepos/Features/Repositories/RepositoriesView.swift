@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct RepositoriesView: View {
     @StateObject private var viewModel = RepositoriesViewModel()
@@ -46,6 +47,19 @@ struct RepositoriesView: View {
                 .visible(viewModel.repositories.isNotEmpty)
             }
             .navigationTitle("Repositories")
+            .toast(
+                isPresenting: $viewModel.showError,
+                alert: {
+                    AlertToast(
+                        displayMode: .hud,
+                        type: .error(.red),
+                        subTitle: viewModel.errorMessage
+                    )
+                },
+                completion: {
+                    viewModel.errorMessage = ""
+                }
+            )
         }
     }
 }

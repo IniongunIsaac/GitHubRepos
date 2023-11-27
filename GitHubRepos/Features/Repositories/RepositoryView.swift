@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct RepositoryView: View {
     let repository: Repository
@@ -14,10 +15,17 @@ struct RepositoryView: View {
         VStack(alignment: .leading, spacing: 12) {
             
             HStack(alignment: .center, spacing: 10) {
-                Image(.profilePlaceholder)
+                KFImage(URL(string: repository.owner?.avatarURL ?? ""))
+                    .placeholder {
+                        Image(.profilePlaceholder)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
+                    }
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
+                    .cornerRadius(10)
                 
                 Text(repository.fullName ?? "full/name")
                     .lineLimit(1)

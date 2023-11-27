@@ -6,53 +6,65 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct UserDetailsView: View {
+    @StateObject var viewModel: UsersViewModel
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 15) {
+                LoaderView()
+                    .visible(viewModel.showLoader)
                 
                 HStack(alignment: .top, spacing: 10) {
-                    Image(.profilePlaceholder)
+                    KFImage(URL(string: viewModel.user?.avatarURL ?? ""))
+                        .placeholder {
+                            Image(.profilePlaceholder)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 45, height: 45)
+                        }
                         .resizable()
                         .scaledToFit()
                         .frame(width: 45, height: 45)
+                        .cornerRadius(22.5)
                     
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Isaac Iniongun")
-                            .font(.system(size: 18, weight: .semibold))
+                        Text(viewModel.user?.displayName ?? "")
+                            .font(.system(size: 20, weight: .semibold))
                         
-                        Text("iOS Engineer")
+                        Text(viewModel.user?.nodeID ?? "")
                             .font(.system(size: 14, weight: .regular))
                     }
                 }
                 
-                Text("These are random words that will be replaced in due time. Config files for my github profile hese are random words that will be replaced in due time. Config files for my github profile")
+                Text(viewModel.user?.bio ?? "Bio")
                     .font(.system(size: 14, weight: .regular))
                 
                 HStack(spacing: 15) {
                     IconLabelView(
                         imageResource: .location,
-                        text: "Lagos, Nigeria",
+                        text: viewModel.user?.location ?? "--no-location--",
                         font: .system(size: 14),
                         spacing: 8
                     )
                     .foregroundColor(.gray)
                     
-                    Link(destination: URL(string: "http://www.paige.com")!) {
+                    Link(destination: URL(string: viewModel.user?.htmlURL ?? "")!) {
                         IconLabelView(
                             imageResource: .link,
-                            text: "http://www.paige.com",
+                            text: viewModel.user?.htmlURL ?? "Profile",
                             font: .system(size: 14),
                             spacing: 8
                         )
-                        .foregroundColor(.black)
+                        .foregroundColor(.blue)
                     }
                 }
                 
                 IconLabelView(
                     imageResource: .followers,
-                    text: "400 followers  .  30 following",
+                    text: viewModel.user?.followerFollowing ?? "",
                     font: .system(size: 14),
                     spacing: 8
                 )
@@ -63,7 +75,7 @@ struct UserDetailsView: View {
                         .font(.system(size: 15, weight: .medium))
                     
                     PillView(
-                        text: "200",
+                        text: "\(viewModel.user?.publicRepos ?? 0)",
                         font: .system(size: 12, weight: .medium),
                         textColor: .black,
                         bgColor: .gray.opacity(0.2),
@@ -91,20 +103,25 @@ struct UserDetailsView: View {
                 )
                 .centerHorizontally()
                 .padding(.top, 100)
-                .visible(false)
+                .visible(viewModel.userRepositories.isEmpty)
                 
-                ForEach(1...10, id: \.self) { _ in
-                    UserRepositoryView()
+                ForEach(viewModel.userRepositories) { repo in
+                    UserRepositoryView(repo: repo)
                         .padding(.horizontal, 1)
                 }
-                .visible(true)
+                .visible(viewModel.userRepositories.isNotEmpty)
             }
         }
         .padding(.horizontal, 20)
         .padding(.top, -40)
+        .onAppear {
+            Task {
+                await viewModel.getUserAndRepos()
+            }
+        }
     }
 }
 
-#Preview {
-    UserDetailsView()
-}
+//#Preview {
+//    UserDetailsView()
+//}

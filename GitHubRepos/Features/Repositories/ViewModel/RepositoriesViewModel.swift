@@ -12,6 +12,8 @@ final class RepositoriesViewModel: ObservableObject {
     private let remoteDatasource: RepositoriesRemoteDatasourceProtocol
     @Published var repositories = [Repository]()
     @Published var showLoader = false
+    @Published var showError = false
+    @Published var errorMessage = ""
     
     init(remoteDatasource: RepositoriesRemoteDatasourceProtocol = RepositoriesRemoteDatasource()) {
         self.remoteDatasource = remoteDatasource
@@ -24,9 +26,10 @@ final class RepositoriesViewModel: ObservableObject {
             showLoader.toggle()
             repositories = reposResponse.items ?? []
         } catch {
-            //TODO: show error message?
-            showLoader.toggle()
             kprint(error.localizedDescription, logType: .error)
+            showLoader.toggle()
+            errorMessage = error.localizedDescription
+            showError.toggle()
         }
     }
 }

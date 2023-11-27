@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct UserRepositoryView: View {
+    var repo: Repository
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             
             HStack(alignment: .center, spacing: 10) {
-                Text("IsaacIniongun/GitHubRepos")
+                Text(repo.fullName ?? "")
                     .lineLimit(1)
                     .font(.system(size: 15, weight: .regular))
                 
-                Text("Public")
+                Text(repo.visibility ?? "")
                     .font(.system(size: 12, weight: .light))
                     .padding(.horizontal, 8)
                     .padding(.vertical, 6)
@@ -27,23 +29,33 @@ struct UserRepositoryView: View {
                 
                 Spacer()
                 
-                IconLabelView(imageResource: .star, text: "10")
+                IconLabelView(imageResource: .star, text: "\(repo.stargazersCount ?? 0)")
                 
-                IconLabelView(imageResource: .greenCircle, text: "Vue")
+                IconLabelView(imageResource: .greenCircle, text: "\(repo.language ?? "")")
                 
             }
             
-            Text("These are random words that will be replaced in due time. Config files for my github profile hese are random words that will be replaced in due time. Config files for my github profile")
+            Text(repo.description ?? "")
                 .font(.system(size: 15, weight: .regular))
-                .lineLimit(2)
+                .lineLimit(3)
+                .visible(repo.description?.isNotEmpty ?? false)
             
             HStack {
-                Text("Forked from discordify")
+                Link(destination: URL(string: repo.htmlURL ?? "")!) {
+                    IconLabelView(
+                        imageResource: .link,
+                        text: "See Repository",
+                        font: .system(size: 13),
+                        spacing: 6
+                    )
+                    .foregroundColor(.blue)
+                }
                 
-                Text("Updated 4 days ago")
+                Text("\(repo.updatedAt ?? "")")
+                    .font(.system(size: 13, weight: .regular))
+                    .foregroundColor(.gray)
             }
-            .font(.system(size: 14, weight: .regular))
-            .foregroundColor(.gray)
+            
         }
         .padding()
         .overlay(
@@ -53,6 +65,6 @@ struct UserRepositoryView: View {
     }
 }
 
-#Preview {
-    UserRepositoryView()
-}
+//#Preview {
+//    UserRepositoryView()
+//}

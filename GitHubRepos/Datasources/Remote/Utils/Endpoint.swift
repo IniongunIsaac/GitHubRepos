@@ -18,7 +18,7 @@ enum Endpoint {
         case .repositories:
             return "search/repositories"
         case .users:
-            return "users"
+            return "search/users"
         case let .userRepositories(username):
             return "users/\(username)/repos"
         case let .userDetails(username):

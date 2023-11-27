@@ -1,5 +1,5 @@
 //
-//  Owner.swift
+//  User.swift
 //  GitHubRepos
 //
 //  Created by Isaac Iniongun on 27/11/2023.
@@ -7,19 +7,34 @@
 
 import Foundation
 
-struct Owner: Codable {
+struct User: Codable, Identifiable {
     let login: String?
     let id: Int?
     let nodeID: String?
     let avatarURL: String?
     let gravatarID: String?
-    let url, receivedEventsURL: String?
-    let type: String?
-    let htmlURL, followersURL: String?
+    let url, htmlURL, followersURL: String?
     let followingURL, gistsURL, starredURL: String?
     let subscriptionsURL, organizationsURL, reposURL: String?
     let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
     let siteAdmin: Bool?
+    let name: String?
+    let blog, location: String?
+    let email: String?
+    let hireable: Bool?
+    let bio, twitterUsername: String?
+    let publicRepos, publicGists, followers, following: Int?
+    let createdAt, updatedAt: String?
+    
+    var displayName: String {
+        name ?? login ?? "--no--name--"
+    }
+    
+    var followerFollowing: String {
+        "\(followers ?? 0) followers  .  \(following ?? 0) following"
+    }
 
     enum CodingKeys: String, CodingKey {
         case login, id
@@ -27,8 +42,6 @@ struct Owner: Codable {
         case avatarURL = "avatar_url"
         case gravatarID = "gravatar_id"
         case url
-        case receivedEventsURL = "received_events_url"
-        case type
         case htmlURL = "html_url"
         case followersURL = "followers_url"
         case followingURL = "following_url"
@@ -38,6 +51,15 @@ struct Owner: Codable {
         case organizationsURL = "organizations_url"
         case reposURL = "repos_url"
         case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
         case siteAdmin = "site_admin"
+        case name, blog, location, email, hireable, bio
+        case twitterUsername = "twitter_username"
+        case publicRepos = "public_repos"
+        case publicGists = "public_gists"
+        case followers, following
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
     }
 }

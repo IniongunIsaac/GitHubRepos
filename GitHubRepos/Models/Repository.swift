@@ -10,7 +10,7 @@ import Foundation
 struct Repository: Codable, Identifiable {
     let id: Int?
     let nodeID, name, fullName: String?
-    let owner: Owner?
+    let owner: User?
     let itemPrivate: Bool?
     let htmlURL: String?
     let description: String?
@@ -126,7 +126,3 @@ struct Repository: Codable, Identifiable {
         case topics
     }
 }
-
-//extension Repository {
-//    static let dummy = Repository(id: <#T##Int?#>, nodeID: <#T##String?#>, name: <#T##String?#>, fullName: <#T##String?#>, owner: <#T##Owner?#>, itemPrivate: <#T##Bool?#>, htmlURL: <#T##String?#>, description: <#T##String?#>, fork: <#T##Bool?#>, url: <#T##String?#>, createdAt: <#T##Date?#>, updatedAt: <#T##Date?#>, pushedAt: <#T##Date?#>, homepage: <#T##String?#>, size: <#T##Int?#>, stargazersCount: <#T##Int?#>, watchersCount: <#T##Int?#>, language: <#T##String?#>, forksCount: <#T##Int?#>, openIssuesCount: <#T##Int?#>, masterBranch: <#T##String?#>, defaultBranch: <#T##String?#>, score: <#T##Int?#>, archiveURL: <#T##String?#>, assigneesURL: <#T##String?#>, blobsURL: <#T##String?#>, branchesURL: <#T##String?#>, collaboratorsURL: <#T##String?#>, commentsURL: <#T##String?#>, commitsURL: <#T##String?#>, compareURL: <#T##String?#>, contentsURL: <#T##String?#>, contributorsURL: <#T##String?#>, deploymentsURL: <#T##String?#>, downloadsURL: <#T##String?#>, eventsURL: <#T##String?#>, forksURL: <#T##String?#>, gitCommitsURL: <#T##String?#>, gitRefsURL: <#T##String?#>, gitTagsURL: <#T##String?#>, gitURL: <#T##String?#>, issueCommentURL: <#T##String?#>, issueEventsURL: <#T##String?#>, issuesURL: <#T##String?#>, keysURL: <#T##String?#>, labelsURL: <#T##String?#>, languagesURL: <#T##String?#>, mergesURL: <#T##String?#>, milestonesURL: <#T##String?#>, notificationsURL: <#T##String?#>, pullsURL: <#T##String?#>, releasesURL: <#T##String?#>, sshURL: <#T##String?#>, stargazersURL: <#T##String?#>, statusesURL: <#T##String?#>, subscribersURL: <#T##String?#>, subscriptionURL: <#T##String?#>, tagsURL: <#T##String?#>, teamsURL: <#T##String?#>, treesURL: <#T##String?#>, cloneURL: <#T##String?#>, mirrorURL: <#T##String?#>, hooksURL: <#T##String?#>, svnURL: <#T##String?#>, forks: <#T##Int?#>, openIssues: <#T##Int?#>, watchers: <#T##Int?#>, hasIssues: <#T##Bool?#>, hasProjects: <#T##Bool?#>, hasPages: <#T##Bool?#>, hasWiki: <#T##Bool?#>, hasDownloads: <#T##Bool?#>, archived: <#T##Bool?#>, disabled: <#T##Bool?#>, visibility: <#T##String?#>, license: <#T##License?#>, topics: <#T##[String]?#>)
-//}

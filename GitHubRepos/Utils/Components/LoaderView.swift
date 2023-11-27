@@ -14,7 +14,7 @@ struct LoaderView: View {
         HStack {
             Rectangle()
                 .fill(Color.black)
-                .frame(width: 150, height: 4)
+                .frame(width: 150, height: 2)
                 .cornerRadius(2)
                 .offset(x: isLoading ? 200 : -200)
                 .animation(Animation.linear(duration: 2).repeatForever(autoreverses: false))
@@ -22,7 +22,6 @@ struct LoaderView: View {
                     isLoading = true
                 }
         }
-        //.frame(width: 250, height: 50)
     }
 }
 

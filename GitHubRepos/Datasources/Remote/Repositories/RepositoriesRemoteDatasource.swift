@@ -14,13 +14,13 @@ struct RepositoriesRemoteDatasource: RepositoriesRemoteDatasourceProtocol {
         self.service = service
     }
     
-    func getRepositories(query: String) async throws -> RepositoriesResponse {
+    func getRepositories(query: String) async throws -> ItemsResponse<Repository> {
         try await service.makeRequest(
             endpoint: .repositories,
             method: .get,
             parameters: ["q": query],
             headers: nil,
-            responseType: RepositoriesResponse.self
+            responseType: ItemsResponse<Repository>.self
         )
     }
 }

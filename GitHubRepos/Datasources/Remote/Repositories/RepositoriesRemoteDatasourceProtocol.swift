@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RepositoriesRemoteDatasourceProtocol {
-    func getRepositories(query: String) async throws -> RepositoriesResponse
+    func getRepositories(query: String) async throws -> ItemsResponse<Repository>
 }

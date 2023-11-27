@@ -8,24 +8,36 @@
 import SwiftUI
 
 struct UsersView: View {
+    @StateObject private var viewModel = UsersViewModel()
     @State private var showDetails = false
     
     var body: some View {
         NavigationView {
             VStack {
+                LoaderView()
+                    .visible(viewModel.showLoader)
+                
                 SearchView(placeholder: "Search for users...") { searchText in
-                    
+                    Task {
+                        await viewModel.getUsers(query: searchText)
+                    }
                 }
                 .padding(.horizontal)
-                .padding(.top, 4)
+                .padding(.top, 0)
                 
+                Spacer()
+                    .visible(viewModel.users.isEmpty)
                 
                 EmptyStateView(message: "Search Github for users...")
-                    .visible(false)
+                    .visible(viewModel.users.isEmpty)
+                
+                Spacer()
+                    .visible(viewModel.users.isEmpty)
                 
                 ScrollView {
-                    ForEach(1...20, id: \.self) { _ in
-                        UserView() {
+                    ForEach(viewModel.users) { user in
+                        UserView(user: user) {
+                            viewModel.user = user
                             showDetails.toggle()
                         }
                         .padding(.horizontal, 8)
@@ -34,8 +46,9 @@ struct UsersView: View {
                 }
                 .padding(.top, 10)
                 .padding(.horizontal, 8)
+                .visible(viewModel.users.isNotEmpty)
                 
-                NavigationLink(destination: UserDetailsView(), isActive: $showDetails) {
+                NavigationLink(destination: UserDetailsView(viewModel: viewModel), isActive: $showDetails) {
                     EmptyView()
                 }
                 .hidden()
