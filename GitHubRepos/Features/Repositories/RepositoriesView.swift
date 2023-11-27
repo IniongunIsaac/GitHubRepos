@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RepositoriesView: View {
     @State private var visible: Bool = false
+    
     var body: some View {
         NavigationView {
             VStack {
