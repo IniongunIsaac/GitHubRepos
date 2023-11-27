@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchView: View {
     var placeholder: String
     var searchAction: ArgumentAction<String>? = nil
+    var filterAction: ArgumentAction<String>? = nil
     @State private var searchText: String = ""
     
     var body: some View {
@@ -22,6 +23,9 @@ struct SearchView: View {
                 .font(.system(size: 12))
                 .autocapitalization(.none)
                 .autocorrectionDisabled()
+                .onChange(of: searchText) { newValue in
+                    filterAction?(newValue)
+                }
             
             Button("Search") {
                 searchAction?(searchText)

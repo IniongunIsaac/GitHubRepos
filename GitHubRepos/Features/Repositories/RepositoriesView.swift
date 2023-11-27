@@ -18,11 +18,17 @@ struct RepositoriesView: View {
                 LoaderView()
                     .visible(viewModel.showLoader)
                 
-                SearchView(placeholder: "Search for repositories") { searchText in
-                    Task {
-                        await viewModel.getRepositories(query: searchText)
+                SearchView(
+                    placeholder: "Search for repositories",
+                    searchAction: { searchText in
+                        Task {
+                            await viewModel.searchRepositories(query: searchText)
+                        }
+                    },
+                    filterAction:  { filterText in
+                        viewModel.filterRepositories(text: filterText)
                     }
-                }
+                )
                 .padding(.horizontal)
                 .padding(.top, 0)
                 
@@ -60,6 +66,9 @@ struct RepositoriesView: View {
                     viewModel.errorMessage = ""
                 }
             )
+            .onAppear {
+                viewModel.getRepositories()
+            }
         }
     }
 }

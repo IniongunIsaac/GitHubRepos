@@ -41,3 +41,23 @@ func runOnBackground(
         action()
     }
 }
+
+extension String {
+    func insensitiveEquals(_ value: String) -> Bool {
+        localizedCaseInsensitiveCompare(value) == .orderedSame
+    }
+    
+    func insensitiveNotEquals(_ value: String) -> Bool {
+        localizedCaseInsensitiveCompare(value) != .orderedSame
+    }
+    
+    func insensitiveContains(_ value: String) -> Bool {
+        lowercased().localizedCaseInsensitiveContains(value.lowercased())
+    }
+}
+
+extension Optional where Wrapped == String {
+    var orEmpty: String {
+        self ?? ""
+    }
+}
