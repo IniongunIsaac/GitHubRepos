@@ -24,6 +24,39 @@ class Repository: Object, Codable, Identifiable {
     @Persisted var visibility: String?
     @Persisted var topics: List<String>
     
+    convenience init(
+        id: Int,
+        nodeID: String? = nil,
+        name: String? = nil,
+        fullName: String? = nil,
+        owner: User? = nil,
+        htmlURL: String? = nil,
+        repoDescription: String? = nil,
+        createdAt: String? = nil,
+        pushedAt: String? = nil,
+        updatedAt: String? = nil,
+        stargazersCount: Int? = nil,
+        language: String? = nil,
+        visibility: String? = nil,
+        topics: List<String>
+    ) {
+        self.init()
+        self.id = id
+        self.nodeID = nodeID
+        self.name = name
+        self.fullName = fullName
+        self.owner = owner
+        self.htmlURL = htmlURL
+        self.repoDescription = repoDescription
+        self.createdAt = createdAt
+        self.pushedAt = pushedAt
+        self.updatedAt = updatedAt
+        self.stargazersCount = stargazersCount
+        self.language = language
+        self.visibility = visibility
+        self.topics = topics
+    }
+    
     var hasTopics: Bool {
         topics.isNotEmpty
     }

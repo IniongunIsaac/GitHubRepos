@@ -12,6 +12,7 @@ enum Endpoint {
     case users
     case userRepositories(String)
     case userDetails(String)
+    case invalidURL
     
     private var kpath: String {
         switch self {
@@ -23,10 +24,17 @@ enum Endpoint {
             return "users/\(username)/repos"
         case let .userDetails(username):
             return "users/\(username)"
+        case .invalidURL:
+            return ""
         }
     }
     
     var path: String {
-        "https://api.github.com/\(kpath)"
+        switch self {
+        case .invalidURL:
+            return "github"
+        default:
+            return "https://api.github.com/\(kpath)"
+        }
     }
 }

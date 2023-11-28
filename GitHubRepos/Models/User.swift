@@ -24,6 +24,39 @@ class User: Object, Codable, Identifiable {
     @Persisted var createdAt: String?
     @Persisted var updatedAt: String?
     
+    convenience init(
+        id: Int,
+        login: String? = nil,
+        nodeID: String? = nil,
+        avatarURL: String? = nil,
+        htmlURL: String? = nil,
+        name: String? = nil,
+        location: String? = nil,
+        email: String? = nil,
+        bio: String? = nil,
+        publicRepos: Int? = nil,
+        following: Int? = nil,
+        followers: Int? = nil,
+        createdAt: String? = nil,
+        updatedAt: String? = nil
+    ) {
+        self.init()
+        self.login = login
+        self.id = id
+        self.nodeID = nodeID
+        self.avatarURL = avatarURL
+        self.htmlURL = htmlURL
+        self.name = name
+        self.location = location
+        self.email = email
+        self.bio = bio
+        self.publicRepos = publicRepos
+        self.following = following
+        self.followers = followers
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+    }
+    
     var displayName: String {
         name ?? login ?? "--no--name--"
     }

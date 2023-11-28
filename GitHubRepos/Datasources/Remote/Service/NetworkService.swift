@@ -10,7 +10,7 @@ import Network
 
 final class NetworkService: NetworkServiceProtocol {
     private let monitor = NWPathMonitor()
-    private let urlSession: URLSession
+    let urlSession: URLSession
     
     init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession

@@ -45,6 +45,7 @@ final class UsersViewModel: ObservableObject {
             didGetUsers(usersResponse.items ?? [])
         } catch {
             showLoader.toggle()
+            errorMessage = error.localizedDescription
             kprint(error.localizedDescription, logType: .error)
         }
     }
