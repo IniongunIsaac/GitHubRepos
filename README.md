@@ -2,7 +2,7 @@
 
 An iOS app that allows users to search for github repos and users.
 
-Powered by [GitHub API](https://api.github.com) endpoints:
+Powered by [GitHub API](https://docs.github.com/en/rest) endpoints:
 
 * `search/repositories`
 * `search/users`
