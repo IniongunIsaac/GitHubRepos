@@ -127,11 +127,11 @@
 		554435852B14ACDD004DB3B2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		554435872B14ADAD004DB3B2 /* ItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsResponse.swift; sourceTree = "<group>"; };
 		5544358A2B14AF76004DB3B2 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
-		554594C42B16FEFB001968D5 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = ../../../../Desktop/2.png; sourceTree = "<group>"; };
-		554594C52B16FEFB001968D5 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../../../../Desktop/3.png; sourceTree = "<group>"; };
-		554594C62B16FEFB001968D5 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.png; path = ../../../../Desktop/4.png; sourceTree = "<group>"; };
-		554594C72B16FEFB001968D5 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../../../../Desktop/1.png; sourceTree = "<group>"; };
 		554594C82B16FF24001968D5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		554594C92B170104001968D5 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		554594CA2B170104001968D5 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		554594CB2B170104001968D5 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		554594CC2B170104001968D5 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		555B60AF2B12AB6700314F1E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		55C560CD2B11305C0064AD04 /* GitHubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C560D02B11305C0064AD04 /* GitHubReposApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposApp.swift; sourceTree = "<group>"; };
@@ -374,10 +374,10 @@
 		554594C32B16FEE9001968D5 /* screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				554594C72B16FEFB001968D5 /* 1.png */,
-				554594C42B16FEFB001968D5 /* 2.png */,
-				554594C52B16FEFB001968D5 /* 3.png */,
-				554594C62B16FEFB001968D5 /* 4.png */,
+				554594CB2B170104001968D5 /* 1.png */,
+				554594CC2B170104001968D5 /* 2.png */,
+				554594C92B170104001968D5 /* 3.png */,
+				554594CA2B170104001968D5 /* 4.png */,
 			);
 			path = screenshots;
 			sourceTree = "<group>";
