@@ -14,9 +14,15 @@ struct UserRepositoryView: View {
         VStack(alignment: .leading, spacing: 12) {
             
             HStack(alignment: .center, spacing: 10) {
-                Text(repo.fullName ?? "")
-                    .lineLimit(1)
-                    .font(.system(size: 15, weight: .regular))
+                HStack(spacing: 0) {
+                    Text("\(repo.owner?.login ?? "username")/")
+                        .font(.system(size: 14, weight: .regular))
+                        .foregroundColor("#62006A".color)
+                    
+                    Text(repo.name ?? "name")
+                        .font(.system(size: 12, weight: .semibold))
+                }
+                .lineLimit(1)
                 
                 Text(repo.visibility ?? "")
                     .font(.system(size: 12, weight: .light))

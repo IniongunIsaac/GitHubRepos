@@ -27,9 +27,15 @@ struct RepositoryView: View {
                     .frame(width: 20, height: 20)
                     .cornerRadius(10)
                 
-                Text(repository.fullName ?? "full/name")
-                    .lineLimit(1)
-                    .font(.system(size: 15, weight: .regular))
+                HStack(spacing: 0) {
+                    Text("\(repository.owner?.login ?? "username")/")
+                        .font(.system(size: 14, weight: .regular))
+                        .foregroundColor("#62006A".color)
+                    
+                    Text(repository.name ?? "name")
+                        .font(.system(size: 12, weight: .semibold))
+                }
+                .lineLimit(1)
                 
                 Spacer()
                 
@@ -45,7 +51,7 @@ struct RepositoryView: View {
                 
             }
             
-            Text(repository.repoDescription ?? "--description here--")
+            Text(repository.repoDescription ?? "--no-description--")
                 .font(.system(size: 15, weight: .regular))
                 .lineLimit(2)
             
