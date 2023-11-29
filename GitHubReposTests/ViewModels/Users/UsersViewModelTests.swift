@@ -10,21 +10,22 @@ import XCTest
 
 final class UsersViewModelTests: XCTestCase {
     
-    var usersViewModel: UsersViewModel!
-    var mockUsersLocalDatasource: MockUsersLocalDatasource!
-    var mockUsersRemoteDatasource: MockUsersRemoteDatasource!
-    var mockRepositoriesLocalDatasource: MockRepositoriesLocalDatasource!
+    private var viewModel: UsersViewModel!
+    private var mockUsersLocalDatasource: MockUsersLocalDatasource!
+    private var mockUsersRemoteDatasource: MockUsersRemoteDatasource!
+    private var mockRepositoriesLocalDatasource: MockRepositoriesLocalDatasource!
     private let mockUsers: [User] = [.testUser1, .testUser2]
     private let mockRepositories: [Repository] = [.testRepository1, .testRepository2]
 
     @MainActor 
     override func setUpWithError() throws {
         try super.setUpWithError()
+        
         mockUsersLocalDatasource = MockUsersLocalDatasource()
         mockUsersRemoteDatasource = MockUsersRemoteDatasource()
         mockRepositoriesLocalDatasource = MockRepositoriesLocalDatasource()
         
-        usersViewModel = UsersViewModel(
+        viewModel = UsersViewModel(
             remoteDatasource: mockUsersRemoteDatasource,
             repositoriesLocalDatasource: mockRepositoriesLocalDatasource,
             usersLocalDatasource: mockUsersLocalDatasource
@@ -32,7 +33,7 @@ final class UsersViewModelTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        usersViewModel = nil
+        viewModel = nil
         mockUsersLocalDatasource = nil
         mockUsersRemoteDatasource = nil
         mockRepositoriesLocalDatasource = nil
@@ -43,30 +44,30 @@ final class UsersViewModelTests: XCTestCase {
     func testGetUsers() {
         mockUsersLocalDatasource.saveUsers(mockUsers)
         
-        usersViewModel.getUsers()
+        viewModel.getUsers()
         
-        XCTAssertEqual(usersViewModel.users, mockUsers)
+        XCTAssertEqual(viewModel.users, mockUsers, "'viewModel.users' should be same as 'mockUsers'")
     }
     
     @MainActor
     func testFilterUsersSucceeds() {
         mockUsersLocalDatasource.saveUsers(mockUsers)
-        usersViewModel.getUsers()
+        viewModel.getUsers()
         
-        usersViewModel.filterUsers(text: "Iniongun")
+        viewModel.filterUsers(text: "Iniongun")
         
-        XCTAssertTrue(usersViewModel.users.isNotEmpty)
-        XCTAssertEqual(usersViewModel.users[0].name, "Iniongun")
+        XCTAssertTrue(viewModel.users.isNotEmpty, "'viewModel.users' should not be empty")
+        XCTAssertEqual(viewModel.users[0].name, "Iniongun", "'viewModel.users[0].name' should be 'Iniongun'")
     }
     
     @MainActor
     func testFilterUsersReturnsEmptyResult() {
         mockUsersLocalDatasource.saveUsers(mockUsers)
-        usersViewModel.getUsers()
+        viewModel.getUsers()
         
-        usersViewModel.filterUsers(text: "XX")
+        viewModel.filterUsers(text: "XX")
         
-        XCTAssertTrue(usersViewModel.users.isEmpty)
+        XCTAssertTrue(viewModel.users.isEmpty, "'viewModel.filterUsers' using an invalid search text should return empty results")
     }
     
     @MainActor
@@ -78,33 +79,33 @@ final class UsersViewModelTests: XCTestCase {
         )
         mockUsersRemoteDatasource.usersResponse = mockUsersResponse
         
-        await usersViewModel.searchUsers(query: "Iniongun")
+        await viewModel.searchUsers(query: "Iniongun")
         
-        XCTAssertEqual(usersViewModel.users, mockUsers)
-        XCTAssertEqual(usersViewModel.users.count, 2)
-        XCTAssertTrue(mockUsersLocalDatasource.getUsers().isNotEmpty)
+        XCTAssertEqual(viewModel.users, mockUsers, "'viewModel.users' should be same as 'mockUsers'")
+        XCTAssertEqual(viewModel.users.count, 2, "'viewModel.users' should have a count of 2")
+        XCTAssertTrue(mockUsersLocalDatasource.getUsers().isNotEmpty, "users cache should not be empty")
     }
     
     @MainActor
     func testSearchUsersThrows() async {
-        await usersViewModel.searchUsers(query: "Iniongun")
+        await viewModel.searchUsers(query: "Iniongun")
         
-        XCTAssertTrue(usersViewModel.errorMessage.isNotEmpty)
+        XCTAssertTrue(viewModel.errorMessage.isNotEmpty, "search should return an error message when there's no data")
     }
     
     @MainActor
     func testGetUserAndReposSucceeds() async {
         let mockUser = User.testUser1
         let mockRepositories = [Repository.testRepository1]
-        usersViewModel.user = mockUser
+        viewModel.user = mockUser
         mockUsersRemoteDatasource.user = mockUser
         mockUsersRemoteDatasource.userRepositories = mockRepositories
         
-        await usersViewModel.getUserAndRepos()
+        await viewModel.getUserAndRepos()
         
-        XCTAssertEqual(usersViewModel.userRepositories, mockRepositories)
-        XCTAssertEqual(mockRepositoriesLocalDatasource.getUserRepositories(id: mockUser.id), mockRepositories)
-        XCTAssertEqual(mockUsersLocalDatasource.getUsers(), [mockUser])
+        XCTAssertEqual(viewModel.userRepositories, mockRepositories, "userRepositories should be the same as mockRepositories")
+        XCTAssertEqual(mockRepositoriesLocalDatasource.getUserRepositories(id: mockUser.id), mockRepositories, "cached userRepositories should be the same as mockRepositories")
+        XCTAssertEqual(mockUsersLocalDatasource.getUsers(), [mockUser], "user details should be cached")
     }
 
 }

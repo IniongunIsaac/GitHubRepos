@@ -16,13 +16,17 @@ final class MockURLProtocol: URLProtocol {
         true
     }
     
+    override class func canInit(with task: URLSessionTask) -> Bool {
+        true
+    }
+    
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
         request
     }
     
     override func startLoading() {
-        if let signupError = MockURLProtocol.error {
-            client?.urlProtocol(self, didFailWithError: signupError)
+        if let error = MockURLProtocol.error {
+            client?.urlProtocol(self, didFailWithError: error)
         }
         
         if let urlResponse = MockURLProtocol.urlResponse {

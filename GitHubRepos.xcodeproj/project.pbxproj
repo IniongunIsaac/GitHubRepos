@@ -21,6 +21,7 @@
 		551BED7C2B16912700A1C9B0 /* UsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551BED7B2B16912700A1C9B0 /* UsersViewModelTests.swift */; };
 		551BED7F2B16922700A1C9B0 /* Users+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551BED7E2B16922700A1C9B0 /* Users+.swift */; };
 		551BED812B16942D00A1C9B0 /* Repository+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551BED802B16942D00A1C9B0 /* Repository+.swift */; };
+		551BED832B16A75A00A1C9B0 /* RepositoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551BED822B16A75A00A1C9B0 /* RepositoriesViewModelTests.swift */; };
 		5544354E2B13EBDA004DB3B2 /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544354D2B13EBDA004DB3B2 /* UserDetailsView.swift */; };
 		554435502B13F38B004DB3B2 /* UserRepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544354F2B13F38B004DB3B2 /* UserRepositoryView.swift */; };
 		554435562B141685004DB3B2 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554435552B141685004DB3B2 /* NetworkError.swift */; };
@@ -106,6 +107,7 @@
 		551BED7B2B16912700A1C9B0 /* UsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
 		551BED7E2B16922700A1C9B0 /* Users+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+.swift"; sourceTree = "<group>"; };
 		551BED802B16942D00A1C9B0 /* Repository+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Repository+.swift"; sourceTree = "<group>"; };
+		551BED822B16A75A00A1C9B0 /* RepositoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModelTests.swift; sourceTree = "<group>"; };
 		5544354D2B13EBDA004DB3B2 /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		5544354F2B13F38B004DB3B2 /* UserRepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryView.swift; sourceTree = "<group>"; };
 		554435552B141685004DB3B2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		551BED7A2B16910700A1C9B0 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				551BED822B16A75A00A1C9B0 /* RepositoriesViewModelTests.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 				551BED742B168F9400A1C9B0 /* MockNetworkError.swift in Sources */,
 				551BED642B16440500A1C9B0 /* URLSessionConfiguration+.swift in Sources */,
 				551BED602B15FE0F00A1C9B0 /* TestModels.swift in Sources */,
+				551BED832B16A75A00A1C9B0 /* RepositoriesViewModelTests.swift in Sources */,
 				551BED662B1647A300A1C9B0 /* ResponseData.swift in Sources */,
 				551BED622B1643D400A1C9B0 /* MockURLProtocol.swift in Sources */,
 			);

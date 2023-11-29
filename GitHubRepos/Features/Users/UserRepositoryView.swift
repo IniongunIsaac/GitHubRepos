@@ -51,7 +51,7 @@ struct UserRepositoryView: View {
                     .foregroundColor(.blue)
                 }
                 
-                Text("\(repo.updatedAt ?? "")")
+                Text("Updated on \(repo.updatedAt.orEmpty.dateFormatted())")
                     .font(.system(size: 13, weight: .regular))
                     .foregroundColor(.gray)
             }

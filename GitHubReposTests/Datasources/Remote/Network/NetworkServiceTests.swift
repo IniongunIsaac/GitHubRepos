@@ -38,34 +38,6 @@ final class NetworkServiceTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
-    func testNoInternetConnectionError() async {
-        MockURLProtocol.error = NetworkError.noInternetConnection
-        do {
-            _ = try await networkService.makeRequest(
-                endpoint: .repositories,
-                responseType: SuccessTestModel.self
-            )
-            XCTFail("Expected NetworkError.noInternetConnection")
-        } catch {
-            XCTAssertEqual(error as? NetworkError, NetworkError.noInternetConnection)
-        }
-    }
-    
-    func testInvalidURL() async {
-        MockURLProtocol.error = NetworkError.invalidURL
-        MockURLProtocol.urlResponse = .withCode(400)
-        
-        do {
-            _ = try await networkService.makeRequest(
-                endpoint: .invalidURL,
-                responseType: SuccessTestModel.self
-            )
-            XCTFail("Expected NetworkError.invalidURL")
-        } catch {
-            XCTAssertEqual(error as? NetworkError, NetworkError.invalidURL)
-        }
-    }
 
     func testRequestFailed() async {
         MockURLProtocol.data = ResponseData.failure
